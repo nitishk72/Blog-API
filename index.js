@@ -1,10 +1,21 @@
-var express = require('express');
-var app = express();
-var port = 3000;
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const path = require('path');
+const sass = require('node-sass-middleware');
 
-app.get('/', function(req, res){
-    res.send("<center><h1>This is index Page</h1</center>"); 
-});
+const port = 3000;
+
+app.use(sass({
+    src: path.join(__dirname, 'public'),
+    dest: path.join(__dirname, 'public')
+  }));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+const homeController = require('./controllers/home');
+
+app.get('/', homeController.index);
 
 app.listen(port, function(){
     console.log('Server is Running on PORT Number : '+port);

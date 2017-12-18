@@ -1,0 +1,44 @@
+doctype html
+html
+    head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='theme-color' content='#4DA5F4')
+    meta(name='csrf-token', content=_csrf)
+    title #{title} Blog API | @ntishk72
+    link(rel='shortcut icon', href='/favicon.png')
+    link(rel='stylesheet', href='/css/main.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+
+    body
+
+    .container
+
+      header(clas="clearfix")
+        .nav
+          .ul(class="nav nav-pills pull-right")
+            li(role="presentation" class="active")
+                a(href="#") Home
+        h3(class="text-muted") Project name
+        
+        .jumbotron
+            h1(Jumbotron heading)
+            p(class="lead") Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            p 
+                a(class="btn btn-lg btn-success" href="#" role="button") Sign up today
+                
+        .container
+            //- include partials/flash
+            block content        
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='/js/main.js')
+    .script(async src="https://www.googletagmanager.com/gtag/js?id=UA-110970098-1")
+    script.
+            window.dataLayer=window.dataLayer||[];function gtag(){
+                dataLayer.push(arguments)
+            }
+            gtag('js',new Date());gtag('config','UA-110970098-1');
+
