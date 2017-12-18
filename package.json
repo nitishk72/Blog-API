@@ -1,0 +1,29 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "description": "with the help of this API you can save and retrive data from database using your API key.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Blog",
+    "API",
+    "API",
+    "node.js",
+    "NODE",
+    "PROJECT",
+    "React"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitishk72/Blog-API.git"
+  },
+  "author": "Nitish Kumar Singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "react": "^16.2.0"
+  }
+}
